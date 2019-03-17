@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="color:black">Vagas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#e6cac7;" padding >
+  
+    <ion-list>
+        <ion-card-header ion-item *ngFor="let item of items">
+            <h2>{{item.empresa}}</h2>
+            <ion-card-title>{{item.vaga}}</ion-card-title>
+            
+            <ion-card-content>{{item.descricaodavaga}}</ion-card-content>
+            <button ion-button large color=fundo block on-click="aceitar()">
+                CANDIDATAR
+             </button>
+          </ion-card-header>      
+    </ion-list>
+    <ion-fab>
+        <button ion-fab color="danger" style="position:absolute;bottom: -85vh; right: -90vw;" on-click="goToCalendRioMenstrualPage()">
+          <ion-icon name="warning" class="button-padding"></ion-icon>
+          </button>
+      </ion-fab>
+</ion-content>

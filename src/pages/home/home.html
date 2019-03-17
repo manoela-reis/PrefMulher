@@ -1,25 +1,27 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>
       Home
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page6">
-  <button id="home-button9" ion-button outline color="positive" block>
+<ion-content style="background-color:#e6cac7; position: relative;" padding id="page6" >
+  <h2 style="text-align: center;">Olá, bem-vinda!<br> Seu email é: {{email}}</h2>
+  <button id="home-button9" ion-button outline color="fundo" block on-click="goToVagasPage()">
     Vagas
   </button>
-  <button id="home-button10" ion-button outline color="positive" block>
+  <button id="home-button10" ion-button outline color="fundo" block on-click="goToServicosAddPage()">
     Serviços de Apoio
   </button>
-  <button id="home-button11" ion-button outline color="positive" block>
+  <button id="home-button11" ion-button outline color="fundo" block on-click="goToServiOsDisponVeis()">
     Informações Úteis
   </button>
   <div class="spacer" style="width:300px;height:214px;" id="home-spacer2"></div>
-  <button id="home-button12" ion-button color="royal" block>
-    Pânico
-  </button>
+  
+ 
+  <ion-fab>
+      <button ion-fab color="danger" style="position:absolute;bottom: -85vh; right: -90vw;" on-click="goToCalendRioMenstrualPage()">
+        <ion-icon name="warning" class="button-padding"></ion-icon>
+        </button>
+    </ion-fab>
 </ion-content>

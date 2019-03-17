@@ -1,3 +1,20 @@
 page-home {
+    ion-header{
+        .toolbar-background
+	{
+		border: none !important;
+		background-color: color($colors, color2);
+    }
+    
+    .bg{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: color($colors, fundo);
+    }}
 
+    .button-padding {
+        padding: 0 10px;
+    }
+    
 }
+

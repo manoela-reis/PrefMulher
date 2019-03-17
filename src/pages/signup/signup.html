@@ -1,8 +1,5 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>
       Signup
     </ion-title>
@@ -27,16 +24,16 @@
         <ion-label>
           Email
         </ion-label>
-        <ion-input type="email" placeholder=""></ion-input>
+        <ion-input #email type="email" placeholder=""></ion-input>
       </ion-item>
       <ion-item id="signup-input5">
         <ion-label>
           Password
         </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+        <ion-input #password type="text" placeholder=""></ion-input>
       </ion-item>
     </ion-list>
-    <button id="signup-button8" ion-button color="stable" block on-click="goToLogin()">
+    <button id="signup-button8" ion-button color=fundo block on-click="signup()">
       Sign up
     </button>
   </form>

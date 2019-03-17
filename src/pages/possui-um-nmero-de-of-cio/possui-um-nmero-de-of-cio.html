@@ -1,18 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>
       Possui um número de ofício?
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page1">
-  <button id="possuiUmNMeroDeOfCio-button3" ion-button color="balanced" block on-click="goToSignup()">
+<ion-content style="background-color:#e6cac7;" padding id="page1">
+  <button ion-button large color=secondary block on-click="goToSignup()">
     SIM
   </button>
-  <button id="possuiUmNMeroDeOfCio-button4" ion-button color="assertive" block on-click="goToServiOsDisponVeis()">
+  <button id="possuiUmNMeroDeOfCio-button4" ion-button large color=danger block on-click="goToServiOsDisponVeis()">
     NÃO
   </button>
+  <ion-fab>
+      <button ion-fab color="danger" style="position:absolute;bottom: -85vh; right: -90vw;" on-click="goToCalendRioMenstrualPage()">
+        <ion-icon name="warning" class="button-padding"></ion-icon>
+        </button>
+    </ion-fab>
 </ion-content>

@@ -1,21 +1,23 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>
       Serviços Disponíveis
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2">
-  <button id="serviOsDisponVeis-button5" ion-button color="positive" block>
+<ion-content style="background-color:#e6cac7;" padding id="page2">
+  <button id="serviOsDisponVeis-button5" ion-button large color=fundo block on-click="goToTelefonesTeisPage()">
     Telefones Úteis
   </button>
-  <button id="serviOsDisponVeis-button6" ion-button color="positive" block>
+  <button id="serviOsDisponVeis-button6" ion-button large color=fundo block>
     NearBy
   </button>
-  <button id="serviOsDisponVeis-button7" ion-button color="positive" block>
+  <button id="serviOsDisponVeis-button7" ion-button large color=fundo block>
     Mais Informações
   </button>
+  <ion-fab>
+      <button ion-fab color="danger" style="position:absolute;bottom: -85vh; right: -90vw;" on-click="goToCalendRioMenstrualPage()">
+        <ion-icon name="warning" class="button-padding"></ion-icon>
+        </button>
+    </ion-fab>
 </ion-content>

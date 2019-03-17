@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ServiOsDisponVeisPage } from '../servi-os-dispon-veis/servi-os-dispon-veis';
 import { SignupPage } from '../signup/signup';
 import { LoginPage } from '../login/login';
+import { CalendRioMenstrualPage } from '../calend-rio-menstrual/calend-rio-menstrual';
 
 @Component({
   selector: 'page-possui-um-nmero-de-of-cio',
@@ -24,5 +25,9 @@ export class PossuiUmNMeroDeOfCioPage {
   }goToPossuiUmNMeroDeOfCio(params){
     if (!params) params = {};
     this.navCtrl.push(PossuiUmNMeroDeOfCioPage);
+  }
+  goToCalendRioMenstrualPage(params){
+    if (!params) params = {};
+    this.navCtrl.push(CalendRioMenstrualPage);
   }
 }

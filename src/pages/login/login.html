@@ -1,34 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>
       Login
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page4">
+<ion-content  padding id="page4">
   <form id="login-form1">
     <ion-list id="login-list2">
-      <ion-item id="login-input1">
+      <ion-item id="login-input1" >
         <ion-label>
           Email
         </ion-label>
-        <ion-input type="email" placeholder=""></ion-input>
+        <ion-input #email type="email" placeholder=""></ion-input>
       </ion-item>
       <ion-item id="login-input2">
         <ion-label>
           Password
         </ion-label>
-        <ion-input type="password" placeholder=""></ion-input>
+        <ion-input type="password" #password placeholder=""></ion-input>
       </ion-item>
     </ion-list>
     <div class="spacer" style="height:40px;" id="login-spacer1"></div>
-    <button id="login-button1" ion-button color="stable" block>
+    <button id="login-button1" ion-button color=fundo block on-click="signIn()">
       Log in
     </button>
-    <button id="login-button2" ion-button clear color="positive" block on-click="goToPossuiUmNMeroDeOfCio()">
+    <button id="login-button2" ion-button clear color=fundo block on-click="goToPossuiUmNMeroDeOfCio()">
       Ou cadastre-se
     </button>
   </form>
