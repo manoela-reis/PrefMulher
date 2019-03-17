@@ -1,0 +1,81 @@
+
+<app-nav></app-nav>
+
+<div class="d-flex flex-column align-items-center vh-100 p-5">
+  <table class="table col-10 col-md-8 col-lg-9">
+      <thead>
+        <tr>
+          <th scope="col" *ngFor="let header of infoByServices[type].tableHeader">{{ header }}</th>
+          <!-- <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th> -->
+        </tr>
+      </thead>
+      <tbody *ngIf="type === 'organization'">
+        <tr *ngFor="let item of response; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.numero }}</td>
+          <td>{{ item.orgao }}</td>
+          <td>{{ item.mulher.nome }}</td>
+          <td>{{ item.mulher.rg }}</td>
+          <td>{{ item.mulher.cpf }}</td>
+          <td [ngClass]="item.cat === 'Sim' ? 'text-success' : ''">{{ item.cat }}</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="type === 'company'">
+          <tr *ngFor="let item of response; index as i" (click)="getVacancyDetails(item.vaga)">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.empresa }}</td>
+            <td>{{ item.vaga.length }}</td>
+          </tr>
+      </tbody>
+      <tbody *ngIf="type === 'cat'">
+          <tr *ngFor="let item of response; index as i" (click)="getVacancyDetails(response[i])">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.oficio }}</td>
+              <td>{{ item.cadastrada.nome }}</td>
+              <td>{{ item.vaga.cargo }}</td>
+              <td>{{ item.empresa }}</td>
+              <td [ngClass]="item.status === 'Aprovada' ? 'text-success' : 'text-primary'">{{ item.status }}</td>
+            </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="type === 'company'" class="d-flex justify-content-center">
+      <div class="card col-10 col-md-8 col-lg-6" *ngFor="let vacancy of vacancyVisualization">
+          <div class="card-body">
+            <h5 class="card-title">{{ vacancy.cargo }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ vacancy.salario }}</h6>
+            <p class="card-text">{{ vacancy.descricaodavaga }}</p>
+            <p class="card-text">{{ vacancy.horariodetrabalho }}</p>
+            <p class="card-text">{{ vacancy.localdetrabalho }}</p>
+            <p class="card-text">{{ vacancy.beneficios }}</p>
+          </div>
+        </div>
+    </div>
+
+    <div *ngIf="type === 'cat' && vacancyVisualization">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="card col-10 col-md-6 col-lg-4 mr-1">
+            <div class="card-body">
+              <h5 class="card-title">{{ vacancyVisualization.cadastrada.nome }}</h5>
+              <p class="card-text">CPF: {{ vacancyVisualization.cadastrada.cpf }}</p>
+              <p class="card-text">RG: {{ vacancyVisualization.cadastrada.rg }}</p>
+              <p class="card-text">Cargo desejado: {{ vacancyVisualization.cadastrada.cargoDesejado }}</p>
+            </div>
+          </div>
+
+          <div class="card col-10 col-md-6 col-lg-4">
+              <div class="card-body">
+                <h5 class="card-title">{{ vacancyVisualization.vaga.cargo }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ vacancyVisualization.vaga.salario }}</h6>
+                <p class="card-text">{{ vacancyVisualization.vaga.descricaodavaga }}</p>
+                <p class="card-text">{{ vacancyVisualization.vaga.horariodetrabalho }}</p>
+                <p class="card-text">{{ vacancyVisualization.vaga.localdetrabalho }}</p>
+                <p class="card-text">{{ vacancyVisualization.vaga.beneficios }}</p>
+              </div>
+          </div>
+      </div>
+      </div>
+
+</div>
