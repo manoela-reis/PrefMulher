@@ -17,6 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { VagasPage } from '../pages/vagas/vagas';
 import { ServicosAddPage } from '../pages/servicos-add/servicos-add';
 import { NearbyPage } from '../pages/nearby/nearby';
+import { MoreInfoPage } from '../pages/more-info/more-info';
 
 const firebaseAuth = {
   apiKey: "AIzaSyDl6oh5t73FupNYiW_z8uwn2sQmQrHzU00",
@@ -39,6 +40,7 @@ const firebaseAuth = {
     VagasPage,
     ServicosAddPage,
     NearbyPage,
+    MoreInfoPage,
     CalendRioMenstrualPage
     
   ],
@@ -60,6 +62,7 @@ const firebaseAuth = {
     VagasPage,
     NearbyPage,
     ServicosAddPage,
+    MoreInfoPage,
     CalendRioMenstrualPage
   ],
   providers: [

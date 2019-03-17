@@ -1,0 +1,18 @@
+page-more-info {
+    ion-header{
+        .toolbar-background
+	{
+		border: none !important;
+		background-color: color($colors, color2);
+    }
+    
+    .bg{
+        background-repeat: no-repeat;
+        background-position: center;
+    }}
+
+    .button-padding {
+        padding: 0 10px;
+    }
+
+}
