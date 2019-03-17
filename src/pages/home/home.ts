@@ -33,5 +33,6 @@ export class HomePage {
     if (!params) params = {};
     this.navCtrl.push(ServiOsDisponVeisPage);
   }
+ 
   
 }

@@ -31,7 +31,7 @@ export class SignupPage {
     this.navCtrl.push(SignupPage);
   }
   signup(){
-    this.fire.auth.createUserWithEmailAndPassword(this.email.value + '@domian.xta', this.password.value)
+    this.fire.auth.createUserWithEmailAndPassword(this.email.value, this.password.value)
     .then(data => {
       console.log('Esses dados foram guardados: ', data);
     })
