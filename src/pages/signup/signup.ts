@@ -41,4 +41,4 @@ export class SignupPage {
   	console.log('vc se registraria com: ', this.email.value, this.password.value);
   }
   }
-}
+
